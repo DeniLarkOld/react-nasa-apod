@@ -36,7 +36,6 @@ function App() {
           copyright={a.copyright}
           date={a.date}
           explanation={a.explanation}
-          hdurl={a.hdurl}
           title={a.title}
           url={a.url}
         />))}

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { translateText } from './apiTranslate';
+import { LinkTranslate } from './LinkTranslate';
 
-export const Apod = ({copyright, date, explanation, hdurl, title, url}) => {
+export const Apod = ({copyright, date, explanation, title, url}) => {
   if(!copyright) copyright = '';
 
   let [rusExplanation, setRusExplanation] = useState('');
@@ -29,11 +30,15 @@ export const Apod = ({copyright, date, explanation, hdurl, title, url}) => {
     <div className="apod">
       <h3>{title}</h3>
       <h4>{rusTitle}</h4>
+      <LinkTranslate />
       <div>{date}</div>
       <img src={url} alt={title + ' ' + copyright}/>
       <div className="explanation">
         <div className="explanation__eng">{explanation}</div>
-        <div className="explanation__rus">{rusExplanation}</div>
+        <div className="explanation__rus">
+          {rusExplanation}
+          <LinkTranslate />
+        </div>
       </div>
     </div>
   );

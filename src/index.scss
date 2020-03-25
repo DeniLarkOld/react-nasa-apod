@@ -1,3 +1,9 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -19,7 +25,19 @@ body {
   margin-bottom: 200px;
 
   button {
+    padding: 7px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: #183118;
+    color: #edf5ed;
+    border: 2px solid #183118;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
 
+    &:hover {
+      color: #183118;
+      background-color: #edf5ed;
+    }
   }
 }
 
@@ -44,6 +62,22 @@ body {
 
 .apod {
   margin-bottom: 50px;
+
+  h3 {
+    margin-bottom: 0;
+  }
+
+  h4 {
+    margin-top: 2px;
+    margin-bottom: 0;
+    opacity: 0.8;
+  }
+
+  .link-translate {
+    opacity: 0.6;
+    font-size: 14px;
+    text-align: right;
+  }
 
   .explanation {
     display: flex;
